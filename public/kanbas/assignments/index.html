@@ -1,29 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../style/assignment.css">
+</head>
 <body>
-    <table>
-        <tbody>
-        <tr valign="top">
-            <td>
+
+<div class="d-flex flex-row">
+    <aside>
+        <img src="../image/Northeastern-University-Emblem.png" alt="Northeastern University Logo" class="logo">
+        <ul class="nav flex-column">
+            <li class="nav-item"><i class="fas fa-user fa-2x"></i><span><a href="../profile/index.html">Account</a></span></li>
+            <li class="nav-item"><i class="fas fa-tachometer-alt fa-2x"></i><a href="#">Dashboard</a></li>
+            <li class="nav-item third"><i class="fas fa-book fa-2x"></i><a href="../home.html">Courses</a></li>
+            <li class="nav-item"><i class="fas fa-calendar-days fa-2x"></i><a href="#">Calendar</a></li>
+            <li class="nav-item"><i class="fas fa-inbox fa-2x"></i><a href="#">Inbox</a></li>
+            <li class="nav-item"><i class="fas fa-clock fa-2x"></i><a href="#">History</a></li>
+            <li class="nav-item"><i class="fas fa-desktop fa-2x"></i><a href="#">Studio</a></li>
+            <li class="nav-item"><i class="fas fa-right-from-bracket fa-2x"></i><a href="#">Commons</a></li>
+            <li class="nav-item"><i class="fas fa-circle-question fa-2x"></i><a href="#">Help</a></li>
+            
+        </ul>
+    </aside>
+
+    <div class="main-content p-4">
+        <div class="profile-header d-flex align-items-center justify-content-between">
+            <h2>
+                <i class="fa-solid fa-bars fa-1x me-4" id="account-page-header-icon" style="color: red;"></i>
+                <span class="course-code">CS5610.11744.202310</span>
+                <i class="fas fa-chevron-right arrow-icon fa-4x"></i>
+                <span class="course-name">Assignments</span>
+            </h2>
+            <button class="student-view-btn" style="float: right;">
+                <i class="fas fa-glasses"></i> Student View
+            </button>
+        </div>
+        <hr/>
+        <div class="row">
+            <div class="col-md-3"> 
+                <span>202410_1 Fall 2023 Semester</span>
+                <br>
+                <br>
                 <ul>
-                    <li><a href="../navigation/accountNev.html">Account</a></li>
-                    <li><a href="#">Dashboard</a></li>
-                    <li><a href="../navigation/coursesNev.html">Courses</a></li>
-                    <li><a href="#">Calendar</a></li>
-                    <li><a href="#">Inbox</a></li>
-                    <li><a href="#">History</a></li>
-                    <li><a href="#">Studio</a></li>
-                    <li><a href="#">Commons</a></li>
-                    <li><a href="#">Help</a></li>
-                </ul>
-            </td>
-            <td>
-                <ul>
-                    <li><a href="../home.html">Home</a></li>
+                    <li ><a href="../home.html">Home</a></li>
                     <li><a href="#">Modules</a></li>
                     <li><a href="#">Piazza</a></li>
                     <li><a href="#">Zoom Meetings</a></li>
-                    <li><a href="./index.html">Assignments</a></li>
+                    <li class="selected"><a href="../assignments/index.html">Assignments</a></li>
                     <li><a href="#">Quizzes</a></li>
                     <li><a href="../grades.html">Grades</a></li>
                     <li><a href="#">People</a></li>
@@ -38,143 +65,165 @@
                     <li><a href="#">Syllabus</a></li>
                     <li><a href="../Settings/courseDetails.html">Settings</a></li>
                 </ul>
-            </td>
-            <td>
-                <input id="Search-for-Assignment" placeholder="Search for Assignment">
-                <button type="button">Group</button>
-                <button type="button">Assignment</button>
-                <select>
-                    <option value="Edit-Assignment-Dates" selected>Edit Assignment Dates</option>
-                </select>
-                <br>
-                <hr>
-                <h3>
-                ASSIGNMENTS 40% of Total
-                <select id="assignment-dropdown">
-                    <option selected value="Edit">Edit</option>
-                    <option value="SPEED-GRADER">Speed Grader</option>
-                    <option value="DUPLICATE">Duplicate</option>
-                    <option value="DELETE">Delete</option>
-                    <option value="MOVE-TO">Move To...</option>
-                    <option value="SEND-TO">Send To...</option>
-                    <option value="COPY-TO">Copy To...</option>
-                    <option value="SHARE-TO-COMMONS">Share to Commons</option>
-                </select>
-                </h3>
-                <ul>
-                    <li>
-                        <a href="./edit.html">A1 - ENV + HTML</a>
-                        <br>
-                        <a href="#">Multiple Modules</a> | Not available yet
-                    </li>
-                    <li><a href="./edit.html">A2 - CSS + BOOTSTRAP</a>
-                        <br>
-                        <a href="#">Multiple Modules</a> | Not available yet
-                    </li>
-                    <li><a href="./edit.html">A3 - JS + REACT</a>
-                        <br>
-                        <a href="#">Multiple Modules</a> | Not available yet
-                    </li>
-                    <li><a href="./edit.html">A4 - STATE + REDUX</a>
-                        <br>
-                        <a href="#">Multiple Modules</a> | Not available yet
-                    </li>
-                    <li><a href="./edit.html">A5 - NODE + SESSION</a>
-                        <br>
-                        <a href="#">Multiple Modules</a> | Not available yet
-                    </li>
-                    <li><a href="./edit.html">A6 - MONGO + MONGOOSE</a>
-                        <br>
-                        <a href="#">Multiple Modules</a> | Not available yet
-                    </li>
-                </ul>
-                <h3>
-                    QUIZZES 10% of Total
-                    <select id="assignment-dropdown">
-                        <option selected value="Edit">Edit</option>
-                        <option value="SPEED-GRADER">Speed Grader</option>
-                        <option value="DUPLICATE">Duplicate</option>
-                        <option value="DELETE">Delete</option>
-                        <option value="MOVE-TO">Move To...</option>
-                        <option value="SEND-TO">Send To...</option>
-                        <option value="COPY-TO">Copy To...</option>
-                        <option value="SHARE-TO-COMMONS">Share to Commons</option>
-                    </select>
-                </h3>
-                <ul>
-                    <li>
-                        <a href="./edit.html">Q1 - HTML</a>
-                        <br>
-                        <a href="#">Multiple Modules</a> | Not available yet
-                    </li>
-                    <li><a href="./edit.html">Q2 - CSS</a>
-                        <br>
-                        <a href="#">Multiple Modules</a> | Not available yet
-                    </li>
-                    <li><a href="./edit.html">Q3 - JS, ES6</a>
-                        <br>
-                        <a href="#">Multiple Modules</a> | Not available yet
-                    </li>
-                    <li><a href="./edit.html">Q4 - NODE</a>
-                        <br>
-                        <a href="#">Multiple Modules</a> | Not available yet
-                    </li>
-                    <li><a href="./edit.html">Q5 - MONGO</a>
-                        <br>
-                        <a href="#">Multiple Modules</a> | Not available yet
-                    </li>
-                    <li><a href="./edit.html">A6 - MONGO + MONGOOSE</a>
-                        <br>
-                        <a href="#">Multiple Modules</a> | Not available yet
-                    </li>
-                </ul>
-                <h3>
-                    QUIZZES 20% of Total
-                    <select id="assignment-dropdown">
-                        <option selected value="Edit">Edit</option>
-                        <option value="SPEED-GRADER">Speed Grader</option>
-                        <option value="DUPLICATE">Duplicate</option>
-                        <option value="DELETE">Delete</option>
-                        <option value="MOVE-TO">Move To...</option>
-                        <option value="SEND-TO">Send To...</option>
-                        <option value="COPY-TO">Copy To...</option>
-                        <option value="SHARE-TO-COMMONS">Share to Commons</option>
-                    </select>
-                </h3>
-                <ul>
-                    <li>
-                        <a href="./edit.html">Midterm</a>
-                        <br>
-                        <a href="#">Multiple Modules</a> | Not available yet
-                    </li>
-                    <li><a href="./edit.html">Final</a>
-                        <br>
-                        <a href="#">Multiple Modules</a> | Not available yet
-                    </li>
-                </ul>
-                <h3>
-                    PROJECT 30% of Total
-                    <select id="assignment-dropdown">
-                        <option selected value="Edit">Edit</option>
-                        <option value="SPEED-GRADER">Speed Grader</option>
-                        <option value="DUPLICATE">Duplicate</option>
-                        <option value="DELETE">Delete</option>
-                        <option value="MOVE-TO">Move To...</option>
-                        <option value="SEND-TO">Send To...</option>
-                        <option value="COPY-TO">Copy To...</option>
-                        <option value="SHARE-TO-COMMONS">Share to Commons</option>
-                    </select>
-                </h3>
-                <ul>
-                    <li>
-                        <a href="./edit.html">Project</a>
-                        <br>
-                        <a href="#">Multiple Modules</a> | Not available yet
-                    </li>
-                </ul>
-            </td>
-        </tr>
-        </tbody>
-    </table>
+            </div>
+            <div>
+                <div class="d-flex mb-1 justify-content-between" id="assignments-top-buttons">
+                    <div>
+                        <input type="text" class="form-control" placeholder="Search for Assignment">
+                    </div>
+                    <div>
+                        <button class="btn btn-secondary me-1" type="button">
+                            <i class="fa fa-plus" aria-hidden="true"></i>
+                            Group
+                        </button>
+                        <button class="btn btn-danger me-1" type="button">
+                            <i class="fa fa-plus" aria-hidden="true"></i>
+                            Assignment
+                        </button>
+                        <button class="btn btn-secondary me-1" type="button">
+                            <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="container mt-5">
+                    <div class="list-group">
+                        <div class="row list-group-item bg-light">
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                            <strong>Assignments</strong>
+                            <div class="float-right">
+                                <span class="badge">40% of Total</span>
+                                <i class="fa fa-plus ml-2"></i>
+                                <i class="fa fa-ellipsis-v ml-2"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="row assignment-row">
+                            <div class="col-md-1 d-flex align-items-center">
+                                <i class="fas fa-ellipsis-v options-icon mr-2"></i>
+                                <i class="fas fa-ellipsis-v options-icon mr-2"></i>
+                                <i class="fa-regular fa-pen-to-square options-icon" style="color: green;"></i>
+                            </div>
+                            <div class="col-md-10">
+                                <div class="assignment-title">A1 SETUP</div>
+                                    <div class="assignment-details">Week 0 - SETUP - Week starting on Monday September 5th (9/5/2022) Module |</div>
+                                    <div class="assignment-details"><strong>Due</strong> Sep 18, 2022 at 11:59pm | 100 pts</div>
+                            </div>
+                            <div class="float-right">
+                                <i class="fas fa-check-circle check-icon"></i>
+                                <i class="fas fa-ellipsis-v options-icon ml-4"></i>
+                            </div>
+                        </div>
+
+                        <div class="row assignment-row">
+                            <div class="col-md-1 d-flex align-items-center">
+                                <i class="fas fa-ellipsis-v options-icon mr-2"></i>
+                                <i class="fas fa-ellipsis-v options-icon mr-2"></i>
+                                <i class="fa-regular fa-pen-to-square options-icon" style="color: green;"></i>
+                            </div>
+                            <div class="col-md-10">
+                                <div class="assignment-title">A1 SETUP</div>
+                                    <div class="assignment-details">Week 0 - SETUP - Week starting on Monday September 5th (9/5/2022) Module |</div>
+                                    <div class="assignment-details"><strong>Due</strong> Sep 18, 2022 at 11:59pm | 100 pts</div>
+                            </div>
+                            <div class="float-right">
+                                <i class="fas fa-check-circle check-icon"></i>
+                                <i class="fas fa-ellipsis-v options-icon ml-4"></i>
+                            </div>
+                        </div>
+
+                        <div class="row assignment-row">
+                            <div class="col-md-1 d-flex align-items-center">
+                                <i class="fas fa-ellipsis-v options-icon mr-2"></i>
+                                <i class="fas fa-ellipsis-v options-icon mr-2"></i>
+                                <i class="fa-regular fa-pen-to-square options-icon" style="color: green;"></i>
+                            </div>
+                            <div class="col-md-10">
+                                <div class="assignment-title">A1 SETUP</div>
+                                    <div class="assignment-details">Week 0 - SETUP - Week starting on Monday September 5th (9/5/2022) Module |</div>
+                                    <div class="assignment-details"><strong>Due</strong> Sep 18, 2022 at 11:59pm | 100 pts</div>
+                            </div>
+                            <div class="float-right">
+                                <i class="fas fa-check-circle check-icon"></i>
+                                <i class="fas fa-ellipsis-v options-icon ml-4"></i>
+                            </div>
+                        </div>
+
+                        <div class="row assignment-row">
+                            <div class="col-md-1 d-flex align-items-center">
+                                <i class="fas fa-ellipsis-v options-icon mr-2"></i>
+                                <i class="fas fa-ellipsis-v options-icon mr-2"></i>
+                                <i class="fa-regular fa-pen-to-square options-icon" style="color: green;"></i>
+                            </div>
+                            <div class="col-md-10">
+                                <div class="assignment-title">A1 SETUP</div>
+                                    <div class="assignment-details">Week 0 - SETUP - Week starting on Monday September 5th (9/5/2022) Module |</div>
+                                    <div class="assignment-details"><strong>Due</strong> Sep 18, 2022 at 11:59pm | 100 pts</div>
+                            </div>
+                            <div class="float-right">
+                                <i class="fas fa-check-circle check-icon"></i>
+                                <i class="fas fa-ellipsis-v options-icon ml-4"></i>
+                            </div>
+                        </div>
+
+                        <div class="row assignment-row">
+                            <div class="col-md-1 d-flex align-items-center">
+                                <i class="fas fa-ellipsis-v options-icon mr-2"></i>
+                                <i class="fas fa-ellipsis-v options-icon mr-2"></i>
+                                <i class="fa-regular fa-pen-to-square options-icon" style="color: green;"></i>
+                            </div>
+                            <div class="col-md-10">
+                                <div class="assignment-title">A1 SETUP</div>
+                                    <div class="assignment-details">Week 0 - SETUP - Week starting on Monday September 5th (9/5/2022) Module |</div>
+                                    <div class="assignment-details"><strong>Due</strong> Sep 18, 2022 at 11:59pm | 100 pts</div>
+                            </div>
+                            <div class="float-right">
+                                <i class="fas fa-check-circle check-icon"></i>
+                                <i class="fas fa-ellipsis-v options-icon ml-4"></i>
+                            </div>
+                        </div>
+
+                        <div class="row assignment-row">
+                            <div class="col-md-1 d-flex align-items-center">
+                                <i class="fas fa-ellipsis-v options-icon mr-2"></i>
+                                <i class="fas fa-ellipsis-v options-icon mr-2"></i>
+                                <i class="fa-regular fa-pen-to-square options-icon" style="color: green;"></i>
+                            </div>
+                            <div class="col-md-10">
+                                <div class="assignment-title">A1 SETUP</div>
+                                    <div class="assignment-details">Week 0 - SETUP - Week starting on Monday September 5th (9/5/2022) Module |</div>
+                                    <div class="assignment-details"><strong>Due</strong> Sep 18, 2022 at 11:59pm | 100 pts</div>
+                            </div>
+                            <div class="float-right">
+                                <i class="fas fa-check-circle check-icon"></i>
+                                <i class="fas fa-ellipsis-v options-icon ml-4"></i>
+                            </div>
+                        </div>
+
+                        <div class="row assignment-row">
+                            <div class="col-md-1 d-flex align-items-center">
+                                <i class="fas fa-ellipsis-v options-icon mr-2"></i>
+                                <i class="fas fa-ellipsis-v options-icon mr-2"></i>
+                                <i class="fa-regular fa-pen-to-square options-icon" style="color: green;"></i>
+                            </div>
+                            <div class="col-md-10">
+                                <div class="assignment-title">A1 SETUP</div>
+                                    <div class="assignment-details">Week 0 - SETUP - Week starting on Monday September 5th (9/5/2022) Module |</div>
+                                    <div class="assignment-details"><strong>Due</strong> Sep 18, 2022 at 11:59pm | 100 pts</div>
+                            </div>
+                            <div class="float-right">
+                                <i class="fas fa-check-circle check-icon"></i>
+                                <i class="fas fa-ellipsis-v options-icon ml-4"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>                              
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
 </html>

@@ -1,93 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Edit</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../style/profile.css">
+</head>
 <body>
 
-<table>
-    <tbody>
-    <tr valign="top">
-        <td>
-            <ul>
-                <li><a href="../navigation/accountNev.html">Account</a></li>
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="../navigation/coursesNev.html">Courses</a></li>
-                <li><a href="#">Calendar</a></li>
-                <li><a href="#">Inbox</a></li>
-                <li><a href="#">History</a></li>
-                <li><a href="#">Studio</a></li>
-                <li><a href="#">Commons</a></li>
-                <li><a href="#">Help</a></li>
-            </ul>
-        </td>
-        <td>
-            <ul>
-                <li><a href="#">Notifications</a></li>
-                <li><a href="./index.html">Profile</a></li>
-                <li><a href="#">Files</a></li>
-                <li><a href="#">Settings</a></li>
-                <li><a href="#">ePortfolios</a></li>
-                <li><a href="#">Shared Content</a></li>
-                <li><a href="#">The Hub</a></li>
-                <li><a href="#">Qwickly Course Tools</a></li>
-                <li><a href="#">Global Announcements</a></li>
-            </ul>
-        </td>
-        <td>
-            <form action="./index.html">
-            <h2>Yue Liu</h2>
-            <label for="profile-edit-name">Name:* </label>
-            <input type="text" name="name" id="profile-edit-name" value="Yue Liu">
-            <label for="profile-edit-pronouns">Pronouns: </label>
-            <select name="pronouns" id="profile-edit-pronouns">
-                <option value="NONE" selected>None</option>
-                <option value="He-Him-His">He/Him/His</option>
-                <option value="She-Her-Hers">She/Her/Hers</option>
-            </select>
-            <br>
-            <br>
-            <label for="profile-edit-title">Title: </label>
-            <input type="text" name="title" id="profit-edit-title">
-            <h3>Contact</h3>
-            No registered services, you can add some on the <a href="#">settings</a> page.
-            <h2>Biography</h2>
-            Student, looking for SDE internships, photographer.<br>
-            <textarea name="biography" id="profile-edit-biography" cols="50" rows="5">Student, looking for SDE internships, photographer.</textarea>
-            <br>
-            <h2>Links</h2>
-            <ul>
-                <li><a href="https://www.linkedin.com/in/yueliu0104">LinkedIn</a> Links to an external site.</li>
-            </ul>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Title</th>
-                        <th></th>
-                        <th>URL</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <input type="text" id="profile-edit-title" value="LinkedIn">
-                        </td>
-                        <td>&rarr;</td>
-                        <td>
-                            <input type="text" name="link-url" id="profile-edit-url" value="https://www.linkedin.com/in/yueliu0104"></td>
-                        <td><a href="#">Remove</a></td>
-                    </tr>
-                </tbody>
-            </table>
-            <button>Add another link</button>
-            <br>
-            <button>Cancel</button>
-            <button type="submit">Save Profile</button>
-            <br>
-            <button >Edit Profile</button>
-            <button>Cancel Editing</button>
-            </form>
-        </td>
-    </tr>
-    </tbody>
-</table>
+<div class="d-flex flex-row">
+    <aside>
+        <img src="../image/Northeastern-University-Emblem.png" alt="Northeastern University Logo" class="logo">
+        <ul class="nav flex-column">
+            <li class="nav-item first"><i class="fas fa-user fa-2x"></i><span><a href="index.html">Account</a></span></li>
+            <li class="nav-item"><i class="fas fa-tachometer-alt fa-2x"></i><a href="#">Dashboard</a></li>
+            <li class="nav-item"><i class="fas fa-book fa-2x"></i><a href="../home.html">Courses</a></li>
+            <li class="nav-item"><i class="fas fa-calendar-days fa-2x"></i><a href="#">Calendar</a></li>
+            <li class="nav-item"><i class="fas fa-inbox fa-2x"></i><a href="#">Inbox</a></li>
+            <li class="nav-item"><i class="fas fa-clock fa-2x"></i><a href="#">History</a></li>
+            <li class="nav-item"><i class="fas fa-desktop fa-2x"></i><a href="#">Studio</a></li>
+            <li class="nav-item"><i class="fas fa-right-from-bracket fa-2x"></i><a href="#">Commons</a></li>
+            <li class="nav-item"><i class="fas fa-circle-question fa-2x"></i><a href="#">Help</a></li>
+            
+        </ul>
+    </aside>
+
+    <div class="main-content p-4">
+        <div class="profile-header d-flex align-items-center justify-content-between">
+            <h2>
+                <i class="fa-solid fa-bars fa-1x me-4" id="account-page-header-icon" style="color: red;"></i>
+                Yue Liu
+            </h2>
+        </div>
+        <div class="row">
+            <div class="col-md-3"> 
+                <ul>
+                    <li><a href="#">Notifications</a></li>
+                    <li class="selected"><a href="index.html">Profile</a></li>
+                    <li><a href="#">Files</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">ePortfolios</a></li>
+                    <li><a href="#">Shared Content</a></li>
+                    <li><a href="#">The Hub</a></li>
+                    <li><a href="#">Qwickly Course Tools</a></li>
+                    <li><a href="#">Global Announcements</a></li>
+                </ul>
+            </div>
+            <div class="col-md-7">
+                <i class="fas fa-user fa-5x circle-icon"></i>
+                <span><button style="float: right;"><a href="./edit.html" class="edit-button-link"><i class="fas fa-pencil fa-1x"></i> Cancel Profile</a></button></span>
+                <div class="input-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" value="Yue Liu">
+                </div>
+            
+                <div class="input-group">
+                    <label for="pronouns">Pronouns:</label>
+                    <select id="pronouns">
+                        <option>None</option>
+                    </select>
+                </div>
+            
+                <div class="input-group">
+                    <label for="title">Title:</label>
+                    <input type="text" id="title">
+                </div>
+            
+                <h2>Contact</h2>
+                <p>No registered services, you can add some on the <a href="#" style="color:red;">settings</a> page.</p>
+            
+                <h2>Biography</h2>
+                <textarea> Student, looking for SDE internships, photographer.</textarea>
+            
+                <h2>Links</h2>
+                <div class="row mb-1 align-items-center">
+                    <div class="col-5">
+                        <input type="text" class="form-control" value="YouTube">
+                    </div>
+                    <div class="col-1">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                    <div class="col-5">
+                        <input type="text" class="form-control"
+                            value="https://www.youtube.com/@WebDevTV">
+                    </div>
+                    <div class="col-1">
+                        <i class="fa-solid fa-xmark" style="color:red"></i>
+                    </div>
+                    <div class="col-5"><button>Add another link</button></div>
+                    
+                </div>
+            
+                <div class="button-group">
+                    <button><a href="./index.html" style="color:black">Cancel</a></button>
+                    <button style="background-color: red;"><a href="./index.html" style="color:white">Save Profile</a></button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
 </html>

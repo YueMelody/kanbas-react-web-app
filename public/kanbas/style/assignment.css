@@ -1,0 +1,224 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.nav-item {
+    color: white;
+}
+
+.nav-item i {
+    color: red;
+}
+
+.nav-item.first {
+    background-color: white !important;
+}
+
+.nav-item.first i {
+    color: gray !important;
+}
+
+.nav-item.first a {
+    color: red !important;
+    text-decoration: none; 
+}
+
+.nav-item.third {
+    background-color: white !important;
+}
+
+.nav-item.third i {
+    color: red !important;
+}
+
+.nav-item.third a {
+    color: red !important;
+    text-decoration: none; 
+}
+
+
+li {
+    margin-bottom: 10px;
+}
+
+li.selected a {
+    color: black;
+    position: relative; 
+}
+
+li.selected a::before {
+    content: ''; 
+    position: absolute; 
+    top: 50%; 
+    left: -10px; 
+    height: 100%; 
+    width: 3px; 
+    background-color: black; 
+    transform: translateY(-50%); 
+}
+
+
+ul {
+    list-style-type: none;  
+    padding: 0;             
+    margin: 5;              
+}
+
+ul li a {
+    color: red;             
+    text-decoration: none; 
+}
+
+aside {
+    width: 80px;
+    background-color: #333;
+    color: #fff;
+    height: 100vh;
+    position: fixed;
+    padding-top: 20px;
+}
+
+.logo {
+    width: 75px;
+    padding: 5px;
+    margin: 15px auto;
+}
+
+aside ul.nav {
+    padding-left: 0;
+}
+
+aside ul.nav li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 0.8rem;
+}
+
+aside ul.nav li i {
+    margin-bottom: 5px;
+}
+
+.main-content {
+    margin-left: 85px;
+    width: calc(100% - 85px);
+}
+
+.profile-header {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.contact-section, .biography-section, .links-section {
+    margin-bottom: 30px;
+}
+
+aside ul.nav li.nav-item a {
+    color: white; 
+    text-decoration: none; 
+}
+
+aside ul.nav li.nav-item i.fas {
+    color: red; 
+}
+
+
+aside ul.nav li.nav-item a:hover {
+    color: #ddd; 
+}
+
+.main-content {
+    margin-left: 85px;
+    width: calc(100% - 85px);
+}
+
+.contact-section, .biography-section, .links-section {
+    margin-bottom: 30px;
+}
+
+.course-layout {
+    display: flex;
+    align-items: center;
+    font-family: Arial, sans-serif; 
+}
+
+.course-code {
+    color: red;
+    margin-right: 5px;
+}
+
+.course-name {
+    color: gray;
+    margin-left: 5px;
+}
+
+.arrow-icon {
+    font-size: 12px; 
+}
+
+.student-view-btn {
+    background-color: #f7f7f7;
+    padding: 10px 15px;
+    border-radius: 5px; 
+    font-family: Arial, sans-serif;
+}
+
+.student-view-btn i {
+    margin-right: 5px; 
+}
+
+.list-group-item {
+    border-left: 5px solid transparent;
+    padding-left: 15px; 
+}
+
+.list-group-item .fa-bars {
+    margin-right: 10px;
+}
+
+.list-group-item .badge {
+    background-color: white;
+    color: black;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    padding: 5px 10px;
+}
+
+.list-group-item:not(.bg-light) {
+    border-left-color: green;
+}
+
+.assignment-row {
+    border-left: 5px solid green;
+    padding-left: 15px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.assignment-title {
+    font-weight: bold;
+}
+
+.assignment-details {
+    color: grey;
+}
+
+.assignment-due {
+    color: green;
+}
+
+.check-icon {
+    color: green;
+    font-size: 1.5rem;
+}
+
+.options-icon {
+    font-size: 1.5rem;
+}
+
+
+
+

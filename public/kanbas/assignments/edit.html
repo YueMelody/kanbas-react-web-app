@@ -1,29 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment Edit</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../style/assignment.css">
+</head>
 <body>
-    <table>
-        <tbody>
-        <tr valign="top">
-            <td>
-                <ul>
-                    <li><a href="../navigation/accountNev.html">Account</a></li>
-                    <li><a href="#">Dashboard</a></li>
-                    <li><a href="../navigation/coursesNev.html">Courses</a></li>
-                    <li><a href="#">Calendar</a></li>
-                    <li><a href="#">Inbox</a></li>
-                    <li><a href="#">History</a></li>
-                    <li><a href="#">Studio</a></li>
-                    <li><a href="#">Commons</a></li>
-                    <li><a href="#">Help</a></li>
-                </ul>
-            </td>
-            <td>
+
+<div class="d-flex flex-row">
+    <aside>
+        <img src="../image/Northeastern-University-Emblem.png" alt="Northeastern University Logo" class="logo">
+        <ul class="nav flex-column">
+            <li class="nav-item"><i class="fas fa-user fa-2x"></i><span><a href="../profile/index.html">Account</a></span></li>
+            <li class="nav-item"><i class="fas fa-tachometer-alt fa-2x"></i><a href="#">Dashboard</a></li>
+            <li class="nav-item third"><i class="fas fa-book fa-2x"></i><a href="../home.html">Courses</a></li>
+            <li class="nav-item"><i class="fas fa-calendar-days fa-2x"></i><a href="#">Calendar</a></li>
+            <li class="nav-item"><i class="fas fa-inbox fa-2x"></i><a href="#">Inbox</a></li>
+            <li class="nav-item"><i class="fas fa-clock fa-2x"></i><a href="#">History</a></li>
+            <li class="nav-item"><i class="fas fa-desktop fa-2x"></i><a href="#">Studio</a></li>
+            <li class="nav-item"><i class="fas fa-right-from-bracket fa-2x"></i><a href="#">Commons</a></li>
+            <li class="nav-item"><i class="fas fa-circle-question fa-2x"></i><a href="#">Help</a></li>
+            
+        </ul>
+    </aside>
+
+    <div class="main-content p-4">
+        <div class="profile-header d-flex align-items-center justify-content-between">
+            <h2>
+                <i class="fa-solid fa-bars fa-1x me-4" id="account-page-header-icon" style="color: red;"></i>
+                <span class="course-code">CS5610.11744.202310</span>
+                <i class="fas fa-chevron-right arrow-icon fa-4x"></i>
+                <span class="course-name">Assignments</span>
+                <i class="fas fa-chevron-right arrow-icon fa-4x"></i>
+                <span class="course-name">A1-ENV+...</span>
+            </h2>
+        </div>
+        <div class="row">
+            <div class="col-md-3"> 
+                <span>202410_1 Fall 2023 Semester</span>
+                <br>
+                <br>
                 <ul>
                     <li><a href="../home.html">Home</a></li>
                     <li><a href="#">Modules</a></li>
                     <li><a href="#">Piazza</a></li>
                     <li><a href="#">Zoom Meetings</a></li>
-                    <li><a href="./index.html">Assignments</a></li>
+                    <li class="selected"><a href="index.html">Assignments</a></li>
                     <li><a href="#">Quizzes</a></li>
                     <li><a href="../grades.html">Grades</a></li>
                     <li><a href="#">People</a></li>
@@ -38,119 +63,98 @@
                     <li><a href="#">Syllabus</a></li>
                     <li><a href="../Settings/courseDetails.html">Settings</a></li>
                 </ul>
-            </td>
-            <td>
-                <select id="assignment-speed-grader">
-                    <option value="SpeedGrader" selected>SpeedGrader</option>
-                </select>
+            </div>
+            <div class="col-md-7">
+                
                 <hr>
-                <h2>Assignment Name</h2>
+                <h4>Assignment Name</h4>
                 <input type="text" name="assignment-name" id="assignment--name" value="A1 - ENV + HTML">
                 <br>
                 <br>
-                <textarea cols="30">This is the assignment description.</textarea>
+                <textarea cols="90">This is the assignment description.</textarea>
                 <br>
                 <br>
                 <label for="assignment-points">Points</label>
-                <br>
                 <input type="number" name="assignment-points" id="assignment-points" max="100" min="0" value="100">
                 <br>
                 <br>
                 <label for="assignment-group">Assignment Group</label>
-                <br>
                 <select id="assignment-group">
                     <option value="ASSIGNMENTS" selected>Assignments</option>
                 </select>
                 <br>
                 <br>
                 <label for="Display-Grade">Display Grade as</label>
-                <br>
                 <select id="Display-Grade">
                     <option value="Percentage" selected>Percentage</option>
                 </select>
                 <br>
                 <br>
-                <label for="submission-type-dropdown">Submission type</label>
-                <br>
-                <select id="assignment-submission-type-dropdown">
-                    <option value="ONLINE" selected>Online</option>
-                    <option value="IN-PERSON">In Person</option>
-                </select>
-                <br>
-                <br>
-                <label>Online Entry Options</label>
-                <br>
-                <input type="checkbox" value="Text-Entry" name="check-online-entry" id="checkbox-text-entry">
-                <label for="checkbox-text-entry">Text Entry</label>
-                <br>
-                <input type="checkbox" value="Website-URL" name="check-online-entry" id="checkbox-website-url">
-                <label for="checkbox-website-url">Website URL</label>
-                <br>
-                <input type="checkbox" value="Media-Recordings" name="check-online-entry" id="checkbox-media-recordings">
-                <label for="checkbox-media-recordings">Media Recordings</label>
-                <br>
-                <input type="checkbox" value="Student-Annotation" name="check-online-entry" id="checkbox-student-annotation">
-                <label for="checkbox-student-annotation">Student Annotation</label>
-                <br>
-                <input type="checkbox" value="File-Uploads" name="check-online-entry" id="checkbox-file-uploads">
-                <label for="checkbox-file-uploads">File Uploads</label>
-                <br>
-                <br>
-                <label for="submission-attempts-dropdown">Submission Attempts</label>
-                <br>
-                <select id="submission-attempts-dropdown">
-                    <option value="Unlimited" selected>Unlimited</option>
-                    <option value="Limited">Limited</option>
-                </select>
-                <br>
-                <br>
-                <label for="plagiarism-dropdown">Plagiarism Review</label>
-                <br>
-                <select id="plagiarism-dropdown">
-                    <option value="NONE" selected>None</option>
-                </select>
-                <br>
-                <br>
-                <label>Group Assignment</label>
-                <br>
-                <input type="checkbox" value="This-is-a-group-assignment" name="check-group" id="checkbox-group">
-                <label for="checkbox-group">This is a group assignment</label>
-                <br>
-                <br>
-                <label>Peer Reviews</label>
-                <br>
-                <input type="checkbox" value="Require-Peer-Reviews" name="check-peer-reviews" id="checkbox-peer-reviews">
-                <label for="checkbox-peer-reviews">Require Peer Reviews</label>
-                <br>
-                <br>
-                <label>Assign</label>
-                <br>
-                <label for="assign-to-input">Assign to</label>
-                <br>
-                <input type="text" name="assign-to" id="assign-to-input" value="Everyone">
-                <br>
-                <br>
-                <label for="assignment-due">Due</label>
-                <br>
-                <input type="date" name="due" id="assignment-due-input" value="2023-01-01">
-                <br>
-                <br>
-                <label for="assignment-available-from">Available from</label>
-                <br>
-                <input type="date" name="available-from" id="assignment-available-from"
-                    value="2023-01-01">
-                <br>
-                <br>
-                <label for="assignment-until">Until</label>
-                <br>
-                <input type="date" name="until" id="assignment-until" value="2023-01-01">
-                <br>
-                <br>
-                <button>Cancel</button>
-                <button>Save</button>
-            </td>
-        </tr>
-        </tbody>
-    </table>
+                <div class="row mb-3" id="assignment-submission-type-container">
+                    <div class="col-4 col-form-label text-end">
+                        Submission Type
+                    </div>
+                    <div class="col-6">
+                        <div class="d-flex border rounded" id="assignment-submission-type-box">
+                            <div class="col-7 m-4">
+                                <select class="form-select mb-4" aria-label="Assignment Group Select"
+                                    id="assignment-submission-type">
+                                    <option selected>Online</option>
+                                    <option value="1">In Person</option>
+                                    <option value="2">OPTION 3</option>
+                                    <option value="3">OPTION 4</option>
+                                </select>
+                                <div class="mb-4">
+                                    <h6>Online Entry Options</h6>
+                                </div>
+                                <div class="form-check mb-3">
+                                    <input class="form-check-input" type="checkbox" name="online-entry-options"
+                                        value="text-entry" id="text-entry" checked>
+                                    <label class="form-check-label" for="text-entry">
+                                        Text Entry
+                                    </label>
+                                </div>
+                                <div class="form-check mb-3">
+                                    <input class="form-check-input" type="checkbox" name="online-entry-options"
+                                        value="website-url" id="website-url" checked>
+                                    <label class="form-check-label" for="website-url">
+                                        Website URL
+                                    </label>
+                                </div>
+                                <div class="form-check mb-3">
+                                    <input class="form-check-input" type="checkbox" name="online-entry-options"
+                                        value="media-recordings" id="media-recordings" checked>
+                                    <label class="form-check-label" for="media-recordings">
+                                        Media Recordings
+                                    </label>
+                                </div>
+                                <div class="form-check mb-3">
+                                    <input class="form-check-input" type="checkbox" name="online-entry-options"
+                                        value="student-annotation" id="student-annotation">
+                                    <label class="form-check-label" for="student-annotation">
+                                        Student Annotation
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="online-entry-options"
+                                        value="file-uploads" id="file-uploads">
+                                    <label class="form-check-label" for="file-uploads">
+                                        File Uploads
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
 </html>
