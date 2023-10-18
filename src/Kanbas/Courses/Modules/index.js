@@ -14,9 +14,9 @@ return (
                 &nbsp;&nbsp;Publish All
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
+                <a class="dropdown-item" href="index.js">Action</a>
+                <a class="dropdown-item" href="index.js">Another action</a>
+                <a class="dropdown-item" href="index.js">Something else here</a>
             </div>
             <button type="button" class="btn btn-danger">+ Module</button>
             <button class="btn btn-light"><FaEllipsisV /></button>
