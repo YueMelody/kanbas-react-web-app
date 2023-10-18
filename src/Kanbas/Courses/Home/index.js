@@ -32,15 +32,15 @@ function Home() {
         <div className="col-2">
             <ul className="button-list">
                 {statusButtons.map((buttonText, index) => (
-                    <li className=" wd-course-status-list"key={index}><a href="#" className='btn btn-light'>{statusIcons[index]} {buttonText}</a></li>
+                    <li className=" wd-course-status-list"key={index}><a href="index.js" className='btn btn-light'>{statusIcons[index]} {buttonText}</a></li>
                 ))}
             </ul>
             <h2 style={{color:"black"}}>To do</h2>
             <hr></hr>
             <ul className="todo-list">
-                <li><a href="#">Lecture CS4550.12631.202410 Sep 7 at 11:45am</a></li>
-                <li><a href="#">Lecture CS4550.12631.202410 Sep 11 at 11:45am</a></li>
-                <li><a href="#">CS5610 06 SP23 Lecture Sep 11 at 6pm</a></li>
+                <li><a href="index.js">Lecture CS4550.12631.202410 Sep 7 at 11:45am</a></li>
+                <li><a href="index.js">Lecture CS4550.12631.202410 Sep 11 at 11:45am</a></li>
+                <li><a href="index.js">CS5610 06 SP23 Lecture Sep 11 at 6pm</a></li>
             </ul>
         </div>
     </div>

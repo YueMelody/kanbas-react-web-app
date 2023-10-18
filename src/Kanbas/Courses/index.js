@@ -14,6 +14,7 @@ function Courses() {
     const {pathname} = useLocation();
     const [empty, kanbas, courses, id, screen] = pathname.split("/");
     const course = db.courses.find((course) => course._id === courseId);
+    console.log(empty,kanbas,courses,id)
 
 
     return (
