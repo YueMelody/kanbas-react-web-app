@@ -1,0 +1,48 @@
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button-controls {
+    display: flex;
+    gap: 5px;
+}
+
+.title-circle{
+    border: 1px solid gray;
+    padding-left: 4px;
+    padding-right: 4px;
+    border-radius: 5px;
+}
+
+.assignment-row {
+    color:black;
+    border: 1px solid gray;
+    border-left:5px solid green;
+    background-color:white;
+    padding-left: 15px;
+    padding-right: 15px;
+    font:30px;
+    height: 60px;
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
+.first-row{
+    background-color:snow;
+    border-left: 1px solid gray;
+}
+
+.left-group {
+    display: flex;
+    align-items: center; 
+    gap: 5px; 
+}
+
+
+.right-group{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}

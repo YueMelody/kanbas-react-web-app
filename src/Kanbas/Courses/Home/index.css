@@ -1,0 +1,15 @@
+.button-list{
+
+    padding-left: 0px;
+}
+
+.button-list li{
+    list-style-type: none;
+    margin-bottom: 10px;
+}
+
+.todo-list{
+    padding-left: 0px;
+    list-style-type: none;
+}
+

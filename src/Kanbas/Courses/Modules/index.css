@@ -1,0 +1,3 @@
+.button-group .btn:not(:last-child) {
+    margin-right: 10px;
+}
