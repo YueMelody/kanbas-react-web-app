@@ -1,15 +1,12 @@
 import React ,{useState}from "react";
 import { Link, useParams } from "react-router-dom";
-import db from "../../Database";
 import { FaEllipsisV } from "react-icons/fa";
 import { BiClipboard } from "react-icons/bi";
 import { AiFillCheckCircle } from "react-icons/ai";
 import "./index.css"
 import { useSelector, useDispatch } from "react-redux";
 import {
-    addAssignment,
     deleteAssignment,
-    updateAssignment,
     setAssignment,
 } from "./assignmentsReducer";
 import { useNavigate } from "react-router-dom";

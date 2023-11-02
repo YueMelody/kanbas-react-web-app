@@ -1,6 +1,5 @@
 import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import db from "../../../Database";
 import { Link } from "react-router-dom";
 import { FaEllipsisV } from 'react-icons/fa';
 import { AiFillCheckCircle } from "react-icons/ai";
@@ -8,7 +7,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { useSelector, useDispatch } from "react-redux";
 import {
     addAssignment,
-    deleteAssignment,
     updateAssignment,
     setAssignment,
   } from "../assignmentsReducer";

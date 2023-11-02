@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import { useParams } from "react-router-dom";
-import db from "../../Database";
 import { FaEllipsisV } from "react-icons/fa";
 import { AiFillCheckCircle } from "react-icons/ai";
 import './ModuleList.css'
