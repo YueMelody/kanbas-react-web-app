@@ -6,7 +6,7 @@
     margin-bottom: 10px;
 }
 
-.list-group {
+.navigation-list-group {
     background: #000;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -15,8 +15,17 @@
     position: fixed;
 }
 
-.list-group a{
-    padding: 10px;
+.navigation-list-group-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: black; 
+}
+
+.navigation-list-group a{
+    padding: 5px;
     text-align: center;
     font-size: 1em;
     margin-bottom: 5px;
@@ -26,7 +35,7 @@
     outline: none;
 }
 
-.list-group a.active  {
+.navigation-list-group a.active  {
     background: white;
     color: red;
 }

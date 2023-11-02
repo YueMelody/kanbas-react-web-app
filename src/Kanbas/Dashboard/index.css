@@ -7,8 +7,12 @@
 }
 
 .card {
+    width: 300px;;
     margin-bottom: 35px;
+    flex-direction: column;
+    justify-content: space-between;
 }
+
 .card-header {
     height: 150px; 
     background-color: lightblue !important; 
@@ -41,3 +45,19 @@
     margin-left: 10px;
     font-size: 25px;
 }
+
+.form-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: flex-end;
+    align-self: flex-end;
+    gap: 5px;
+    padding: 5px;
+  }
+  

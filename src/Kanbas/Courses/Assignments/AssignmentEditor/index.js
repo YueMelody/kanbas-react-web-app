@@ -5,15 +5,24 @@ import { Link } from "react-router-dom";
 import { FaEllipsisV } from 'react-icons/fa';
 import { AiFillCheckCircle } from "react-icons/ai";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { useSelector, useDispatch } from "react-redux";
+import {
+    addAssignment,
+    deleteAssignment,
+    updateAssignment,
+    setAssignment,
+  } from "../assignmentsReducer";
 
 function AssignmentEditor() {
     const { assignmentId } = useParams();
-    const assignment = db.assignments.find(
-        (assignment) => assignment._id === assignmentId);
+    const assignments = useSelector((state) => state.assignmentsReducer.assignments);
+    const assignment = useSelector((state) => state.assignmentsReducer.assignment);
     const { courseId } = useParams();
     const navigate = useNavigate();
+    const dispatch = useDispatch();
     const handleSave = () => {
-    console.log("Actually saving assignment TBD in later assignments");
+        let oldAssignment = assignments.find((assignment) => assignment._id === assignmentId);
+        (oldAssignment) ? dispatch(updateAssignment({...assignment, _id: oldAssignment._id,  course: courseId})) : dispatch(addAssignment({ ...assignment, course: courseId }));
     navigate(`/Kanbas/Courses/${courseId}/Assignments`);
 };
 return (
@@ -25,8 +34,16 @@ return (
         </div>
         <hr/>
         <h2 style={{color:"black"}}>Assignment Name</h2>
-        <input value={assignment.title}
-        className="form-control mb-2" />
+        <input value={assignment.title} className="form-control mb-2" onChange={(e) => dispatch(setAssignment({ ...assignment, title: e.target.value }))}/>
+        <h2 style={{color:"black"}}>Assignment Description</h2>
+        <input value={assignment.description} className="form-control mb-2" onChange={(e) => dispatch(setAssignment({ ...assignment, description: e.target.value }))}/>
+        <h2 style={{color:"black"}}>Due Date</h2>
+        <input type="date" value={assignment.dueDate} className="form-control mb-2" onChange={(e) => dispatch(setAssignment({ ...assignment, dueDate: e.target.value }))}/>
+        <h2 style={{color:"black"}}>Available From Date</h2>
+        <input type="date" value={assignment.availableFromDate} className="form-control mb-2" onChange={(e) => dispatch(setAssignment({ ...assignment, availableFromDate: e.target.value }))}/>
+        <h2 style={{color:"black"}}>Available Until Date</h2>
+        <input type="date" value={assignment.availableUntilDate} className="form-control mb-2" onChange={(e) => dispatch(setAssignment({ ...assignment, availableUntilDate: e.target.value }))}/>
+        
         <div className="d-flex flex-row justify-content-end">
             <Link to={`/Kanbas/Courses/${courseId}/Assignments`}
                 className="btn btn-light float-right">

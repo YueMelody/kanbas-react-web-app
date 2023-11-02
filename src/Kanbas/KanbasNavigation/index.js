@@ -20,14 +20,14 @@ function KanbasNavigation() {
     const { pathname } = useLocation();
     return (
         <div>
-            <div className="list-group" style={{ width: 90 }}>
+            <div className="navigation-list-group" style={{ width: 90 }}>
                     <img src={NEUlogo} alt="Northeastern University Logo" class="logo"></img>
                     {links.map((link, index) => (
                         <Link
                             key={index}
                             to={`/Kanbas/${link.name}`}
-                            className={`list-group-item ${pathname.includes(link.name) && "active"}`}>
-                                {link.icon}<br/>
+                            className={`navigation-list-group-item ${pathname.includes(link.name) && "active"}`}>
+                                {link.icon}
                             {link.name}
                         </Link>
                     ))}

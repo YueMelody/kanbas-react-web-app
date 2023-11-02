@@ -1,16 +1,47 @@
-import React from "react";
+import React ,{useState}from "react";
 import { Link, useParams } from "react-router-dom";
 import db from "../../Database";
 import { FaEllipsisV } from "react-icons/fa";
 import { BiClipboard } from "react-icons/bi";
 import { AiFillCheckCircle } from "react-icons/ai";
 import "./index.css"
+import { useSelector, useDispatch } from "react-redux";
+import {
+    addAssignment,
+    deleteAssignment,
+    updateAssignment,
+    setAssignment,
+} from "./assignmentsReducer";
+import { useNavigate } from "react-router-dom";
+import ConfirmDialog from "./confirmDialog";
+
 
 function Assignments() {
     const { courseId } = useParams();
-    const assignments = db.assignments;
-    const courseAssignments = assignments.filter(
-        (assignment) => assignment.course === courseId);
+    const assignments = useSelector((state) => state.assignmentsReducer.assignments);
+    const assignment = useSelector((state) => state.assignmentsReducer.assignment);
+    const courseAssignments = assignments.filter((assignment) => assignment.course === courseId);
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+    const [isDialogOpen, setDialogOpen] = useState(false);
+    const [selectedAssignmentId, setSelectedAssignmentId] = useState(null);
+    const openDialog = (assignmentId) => {
+        console.log("Open dialog for assignmentId:", assignmentId);
+        setSelectedAssignmentId(assignmentId);
+        setDialogOpen(true);
+        console.log(isDialogOpen)
+    };
+
+    const closeDialog = () => {
+        setDialogOpen(false);
+    };
+
+    const confirmDelete = () => {
+        dispatch(deleteAssignment(selectedAssignmentId));
+        closeDialog();
+      };
+   
+
         return (
             <div>
                 <h2>Assignments for course {courseId}</h2>
@@ -18,7 +49,10 @@ function Assignments() {
                     <input class="form-control w-50" placeholder="Search for Assignments"></input>
                     <div class="button-controls">
                         <button class="btn btn-light">+Group</button>
-                        <button type="button" class="btn btn-danger">+ Assignment</button>
+                        <button class="btn btn-danger" onClick={()=>{
+                            dispatch(setAssignment({ ...assignment, title: "New Assignment", course: courseId }));
+                            navigate(`/Kanbas/Courses/${courseId}/Assignments/New`)
+                        }}>+ Assignment</button>
                         <button class="btn btn-light"><FaEllipsisV /></button>
                     </div>
                 </div>
@@ -48,12 +82,18 @@ function Assignments() {
                             </Link>
                             </div>
                             <div class="right-group">
+                                <button class="btn btn-danger" onClick={() => openDialog(assignment._id)}>Delete</button>
                                 <AiFillCheckCircle style={{color:'green'}}/>
                                 <FaEllipsisV/>
                             </div>
                         </div>
                     ))}
                 </div>
+                <ConfirmDialog
+                                    isOpen={isDialogOpen}
+                                    onClose={closeDialog}
+                                    onConfirm={confirmDelete}
+                                />
             </div>
         );
     }
