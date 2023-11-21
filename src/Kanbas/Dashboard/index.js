@@ -55,7 +55,7 @@ return (
                             <button class="btn btn-danger"
                                 onClick={(event) => {
                                     event.preventDefault();
-                                    deleteCourse(course._id);
+                                    deleteCourse(course);
                                     }}>
                                 Delete
                             </button>

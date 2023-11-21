@@ -1,4 +1,4 @@
-import React ,{useState}from "react";
+import React ,{useState, useEffect}from "react";
 import { Link, useParams } from "react-router-dom";
 import { FaEllipsisV } from "react-icons/fa";
 import { BiClipboard } from "react-icons/bi";
@@ -8,17 +8,39 @@ import { useSelector, useDispatch } from "react-redux";
 import {
     deleteAssignment,
     setAssignment,
+    setAssignments
 } from "./assignmentsReducer";
 import { useNavigate } from "react-router-dom";
 import ConfirmDialog from "./confirmDialog";
+import * as client from "./client";
 
 
 function Assignments() {
+    const dispatch = useDispatch();
     const { courseId } = useParams();
+    useEffect( () => {
+        client.findAssignmentsForCourse(courseId)
+          .then((assignments) =>
+            dispatch(setAssignments(assignments))
+        );
+      }, [courseId, dispatch]); 
+    //   const handleAddAssignment = () => {
+    //     client.createAssignment(courseId, assignment).then((assignment) => {
+    //       dispatch(addAssignment(assignment));
+    //     });
+    //   };
+    //   const handleDeleteAssignment = (assignmentId) => {
+    //     client.deleteAssignment(assignmentId).then((status) => {
+    //       dispatch(deleteAssignment(assignmentId));
+    //     });
+    //   };
+    //   const handleUpdateAssignment = async () => {
+    //     const status = await client.updateAssignment(assignment);
+    //     dispatch(updateAssignment(assignment));
+    //   };
     const assignments = useSelector((state) => state.assignmentsReducer.assignments);
     const assignment = useSelector((state) => state.assignmentsReducer.assignment);
     const courseAssignments = assignments.filter((assignment) => assignment.course === courseId);
-    const dispatch = useDispatch();
     const navigate = useNavigate();
     const [isDialogOpen, setDialogOpen] = useState(false);
     const [selectedAssignmentId, setSelectedAssignmentId] = useState(null);
