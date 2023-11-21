@@ -11,13 +11,15 @@ function Kanbas() {
     const [courses, setCourses] = useState([]);
     const API_BASE = process.env.REACT_APP_API_BASE;
     const URL = `${API_BASE}/api/courses`;
-    const findAllCourses = async () => {
-        const response = await axios.get(URL);
-        setCourses(response.data);
-    };
     useEffect(() => {
-    findAllCourses();
-    }, [])
+      const findAllCourses = async () => {
+          const response = await axios.get(URL);
+          setCourses(response.data);
+      };
+  
+      findAllCourses();
+  }, [URL]);
+  
     const [course, setCourse] = useState({
         name: "New Course", number: "New Number",
         startDate: "2023-09-10", endDate: "2023-12-15",

@@ -42,6 +42,7 @@ function WorkingWithArrays() {
             const response = await axios.delete(
             `${API}/${todo.id}`);
             setTodos(todos.filter((t) => t.id !== todo.id));
+            console.log(response);
             } catch (error) {
             console.log(error);
             setErrorMessage(error.response.data.message);
@@ -51,6 +52,7 @@ function WorkingWithArrays() {
         try {
         const response = await axios.put(
             `${API}/${todo.id}`, todo);
+        console.log(response);
         setTodos(todos.map((t) => (
             t.id === todo.id ? todo : t)));
         setTodo({});

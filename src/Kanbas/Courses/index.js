@@ -18,15 +18,23 @@ function Courses({ courses }) {
     const API_BASE = process.env.REACT_APP_API_BASE;
     const URL = `${API_BASE}/api/courses`;
     const [course, setCourse] = useState({});
-    const findCourseById = async (courseId) => {
-      const response = await axios.get(
-        `${URL}/${courseId}`
-      );
-      setCourse(response.data);
-    };
+    // const findCourseById = async (courseId) => {
+    //   const response = await axios.get(
+    //     `${URL}/${courseId}`
+    //   );
+    //   setCourse(response.data);
+    // };
+    // useEffect(() => {
+    //     findCourseById(courseId);
+    //   }, [courseId]);    
     useEffect(() => {
+        const findCourseById = async (id) => {
+          const response = await axios.get(`${URL}/${id}`);
+          setCourse(response.data);
+        };
+    
         findCourseById(courseId);
-      }, [courseId]);    
+    }, [courseId, URL]);
   
     return (
         <div className="body">
