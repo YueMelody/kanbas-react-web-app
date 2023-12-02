@@ -9,6 +9,8 @@ import "./index.css"
 function KanbasNavigation() {
     const links = [
         {name:"Account",icon:<BiUserCircle className="wd-icon wd-user-icon" />},
+        {name:"Signin",icon:<BiUserCircle className="wd-icon" />},
+        {name:"Signup",icon:<BiUserCircle className="wd-icon" />},
         {name:"Dashboard",icon:<RiDashboard3Fill className="wd-icon"/>},
         {name:"Courses",icon:<FaBook className="wd-icon"/>},
         {name:"Calendar",icon:<BsFillCalendar2WeekFill className="wd-icon" />},
